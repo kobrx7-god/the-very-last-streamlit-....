@@ -1,7 +1,7 @@
 from openai import OpenAI
-import time, streamlit as st, newconfig
+import time, streamlit as st
 
-api = newconfig.api
+api = st.secrets['api']
 
 client = OpenAI(api_key = api, base_url= "https://api.groq.com/openai/v1")
 model = 'openai/gpt-oss-120b'
